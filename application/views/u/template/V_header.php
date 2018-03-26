@@ -67,7 +67,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="<?php echo base_url() ?>cek">Cek data</a>
+                        <a href="<?php echo base_url() ?>cek">Cek Status</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url() ?>pendaftaran/kontak">Kontak Kami</a>

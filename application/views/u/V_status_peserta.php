@@ -63,7 +63,7 @@
 
 <?php if($data[0]['status'] == 'sudahdiperiksa') : ?>
     <p class="kartu-download">
-        <a href="">Download Kartu Peserta</a>
+        <a href="<?php echo base_url() ?>cek/to_pdf?pin=<?php echo $_GET['pin'] ?>">Download Kartu Peserta</a>
     </p>
 <?php endif ?>
 

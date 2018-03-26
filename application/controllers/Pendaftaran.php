@@ -131,9 +131,9 @@ class Pendaftaran extends CI_Controller {
             ];
 
             $urutan = null;
-            if($urutan_max = $this->M_pendaftaran->get_urutan($this->input->post('siswa_kelamin'))){
+            if($urutan_max = $this->M_pendaftaran->get_urutan($this->input->post('siswa_kelamin'),$this->input->post('dari_sekolah'))){
                 if(count($urutan_max) > 0){
-                    $urutan = $urutan_max + 1;
+                    $urutan = $urutan_max[0]['urutan'] + 1;
                 }
                 else{
                     $urutan = 1;
@@ -142,6 +142,7 @@ class Pendaftaran extends CI_Controller {
 
             $data_kartu = [
                 $this->input->post('siswa_kelamin'),
+                $this->input->post('dari_sekolah'),
                 $urutan
             ];
 
