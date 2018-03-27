@@ -5,11 +5,12 @@ class Dashboard extends CI_Controller {
     public function __construct(){
         parent::__construct();
         $this->load->model('M_admin');
-    }
-    public function index(){    
         if ($this->session->userdata('user_admin') == false) {
             redirect(base_url().'admin/account/login');
         }
+    }
+    public function index(){    
+        
         $this->load->view('a/template/V_header');
 
         $belum = $this->M_admin->count_belum();

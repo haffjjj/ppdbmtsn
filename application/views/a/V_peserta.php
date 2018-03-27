@@ -3,6 +3,7 @@
 	<br>
 	<button type="button" onclick="tambahsd()" class="btn btn-info" data-toggle="modal" data-target="#modal-add-sd">Tambahkan Peserta SD</button>
 	<button type="button" onclick="tambahmi()" class="btn btn-info" data-toggle="modal" data-target="#modal-add-mi">Tambahkan Peserta MI</button>
+	<a class="btn btn-success" href="<?php echo base_url() ?>admin/peserta/to_excel">Export Excel</a>
 	<ol class="breadcrumb">
 		<li>
 			<a href="http://[::1]/lte/admin/dashboard">
@@ -80,6 +81,11 @@
 									?>
 								</td>
 								<td>
+									<?php if($value['status'] == 'sudahdiperiksa') :?>
+									<a class="btn btn-success" href="<?php echo base_url() ?>cek/to_pdf?pin=mts<?php echo $value['kartu_id'] ?>">Kartu</a>
+									<?php else :?>
+									<a class="btn btn-success" href="" disabled>Kartu</a>
+									<?php endif ?>
 									<button type="button" onclick="viewedit(<?php echo $value['id'] ?>,'<?php echo $value['dari_sekolah'] ?>')" class="btn btn-success" data-toggle="modal" data-target="#modal-viewedit">View/Edit</button>
 									<a onclick="return confirm('Are you sure you want to delete this item?');" class="btn btn-danger" href="<?php echo base_url() ?>admin/peserta/delete/<?php echo $value['id'] ?>">Delete</a>
 								</td>

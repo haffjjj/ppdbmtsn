@@ -6,6 +6,9 @@ class Peserta extends CI_Controller {
         parent::__construct();
         $this->load->model('M_admin');
         $this->load->model('M_pendaftaran');
+        if ($this->session->userdata('user_admin') == false) {
+            redirect(base_url().'admin/account/login');
+        }
     }
 
     public function index(){
@@ -132,6 +135,8 @@ class Peserta extends CI_Controller {
                 'raport_pai_1' => $this->input->post('raport_pai_1'),
                 'raport_pai_2' => $this->input->post('raport_pai_2'),
                 'raport_pai_3' => $this->input->post('raport_pai_3'),
+                'ijazah_tpqsk' => $this->input->post('ijazah_tpqsk'),
+                'ijazah_mdask' => $this->input->post('ijazah_mdask'),
                 'prestasi_nonakademik_jenis_1' => $this->input->post('prestasi_nonakademik_jenis_1'),
                 'prestasi_nonakademik_jenis_2' => $this->input->post('prestasi_nonakademik_jenis_2'),
                 'prestasi_nonakademik_peringkat_kec_1' => $this->input->post('prestasi_nonakademik_peringkat_kec_1'),
@@ -177,7 +182,7 @@ class Peserta extends CI_Controller {
             if ($this->input->post('dari_sekolah') == 'sd') {
 
                 if ($last_id = $this->M_pendaftaran->insert($data,$urutan)) {
-                   redirect(base_url().'admin');
+                   redirect(base_url().'admin/peserta');
                 }
 
                 else{
@@ -197,9 +202,7 @@ class Peserta extends CI_Controller {
                     'raport_fiqih_3' => $this->input->post('raport_fiqih_3'),
                     'raport_ski_1' => $this->input->post('raport_ski_1'),
                     'raport_ski_2' => $this->input->post('raport_ski_2'),
-                    'raport_ski_3' => $this->input->post('raport_ski_3'),
-                    'ijazah_tpqsk' => $this->input->post('ijazah_tpqsk'),
-                    'ijazah_mdask' => $this->input->post('ijazah_mdask')
+                    'raport_ski_3' => $this->input->post('raport_ski_3')
                 ];
                 $data = array_merge($data,$data2);
 
@@ -322,6 +325,18 @@ class Peserta extends CI_Controller {
             'raport_pai_1' => $this->input->post('raport_pai_1'),
             'raport_pai_2' => $this->input->post('raport_pai_2'),
             'raport_pai_3' => $this->input->post('raport_pai_3'),
+            'raport_akiakh_1' => $this->input->post('raport_akiakh_1'),
+            'raport_akiakh_2' => $this->input->post('raport_akiakh_2'),
+            'raport_akiakh_3' => $this->input->post('raport_akiakh_3'),
+            'raport_qh_1' => $this->input->post('raport_qh_1'),
+            'raport_qh_2' => $this->input->post('raport_qh_2'),
+            'raport_qh_3' => $this->input->post('raport_qh_3'),
+            'raport_fiqih_1' => $this->input->post('raport_fiqih_1'),
+            'raport_fiqih_2' => $this->input->post('raport_fiqih_2'),
+            'raport_fiqih_3' => $this->input->post('raport_fiqih_3'),
+            'raport_ski_1' => $this->input->post('raport_ski_1'),
+            'raport_ski_2' => $this->input->post('raport_ski_2'),
+            'raport_ski_3' => $this->input->post('raport_ski_3'),
             'prestasi_nonakademik_jenis_1' => $this->input->post('prestasi_nonakademik_jenis_1'),
             'prestasi_nonakademik_jenis_2' => $this->input->post('prestasi_nonakademik_jenis_2'),
             'prestasi_nonakademik_peringkat_kec_1' => $this->input->post('prestasi_nonakademik_peringkat_kec_1'),
@@ -389,7 +404,7 @@ class Peserta extends CI_Controller {
         $objPHPExcel->getActiveSheet()->SetCellValue('F1','Tanggal Lahir');
         $objPHPExcel->getActiveSheet()->SetCellValue('G1','Anak Ke');
         $objPHPExcel->getActiveSheet()->SetCellValue('H1','Hobi');
-        $objPHPExcel->getActiveSheet()->SetCellValue('I1','Jarak Rumah');
+        $objPHPExcel->getActiveSheet()->SetCellValue('I1','Jarak Rumah (KM)');
         $objPHPExcel->getActiveSheet()->SetCellValue('J1','Alamat Jalan');
         $objPHPExcel->getActiveSheet()->SetCellValue('K1','Alamat Desa');
         $objPHPExcel->getActiveSheet()->SetCellValue('L1','Alamat Kecamatan');
@@ -476,7 +491,15 @@ class Peserta extends CI_Controller {
 
         $row = 2;
         foreach($data as $value){
-            $objPHPExcel->getActiveSheet()->SetCellValue('A'.$row,$value['id']);
+
+            if($value['siswa_kelamin'] == 'laki-laki'){
+                $kel =  'PA';
+            }
+            else{
+                $kel = 'PI';
+            }
+
+            $objPHPExcel->getActiveSheet()->SetCellValue('A'.$row,str_pad($value['urutan'], 4, '0', STR_PAD_LEFT).'/PPDB/'.strtoupper($value['dari_sekolah']).$kel);
             $objPHPExcel->getActiveSheet()->SetCellValue('B'.$row,$value['dari_sekolah']);
             $objPHPExcel->getActiveSheet()->SetCellValue('C'.$row,$value['siswa_namalengkap']);
             $objPHPExcel->getActiveSheet()->SetCellValue('D'.$row,$value['siswa_kelamin']);
@@ -580,7 +603,7 @@ class Peserta extends CI_Controller {
         header('Chace-Control: post-check=0, pre-check=0', FALSE);
         header('Pragma: no-cache');
         header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-        header('Content-Disposition: attachment;filename="ExportDataOrangPHPExcel'. date('Ymd') .'.xlsx"');
+        header('Content-Disposition: attachment;filename="Data_Peserta_'. date('Ymd') .'.xlsx"');
         
         $objWriter->save('php://output');
     }

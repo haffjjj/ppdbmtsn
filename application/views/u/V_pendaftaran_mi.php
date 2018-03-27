@@ -180,12 +180,12 @@
                     <input required type="number" name="keluarga_nik" class="form-control" id="" placeholder="No. Kartu Keluarga">
                 </div>
                 <div class="form-group">
-                    <label for="">No. Kartu KSP (Keluarga Pra Sejahtera)</label>
-                    <input required type="number" name="keluarga_ksp" class="form-control" id="" placeholder="No. Kartu KSP (Keluarga Pra Sejahtera)">
+                    <label for="">No. Kartu KSP (Keluarga Pra Sejahtera) (tidak wajib)</label>
+                    <input type="number" name="keluarga_ksp" class="form-control" id="" placeholder="No. Kartu KSP (Keluarga Pra Sejahtera)">
                 </div>
                 <div class="form-group">
-                    <label for="">No. Induk PKH (Program Keluarga Harapan)</label>
-                    <input required type="number" name="keluarga_pkh" class="form-control" id="" placeholder="No. Induk PKH (Program Keluarga Harapan)">
+                    <label for="">No. Induk PKH (Program Keluarga Harapan) (tidak wajib)</label>
+                    <input type="number" name="keluarga_pkh" class="form-control" id="" placeholder="No. Induk PKH (Program Keluarga Harapan)">
                 </div>
 
 
@@ -326,25 +326,7 @@
                         <input type="text" name="raport_qh_3" class="form-control" id="exampleInputPassword1" placeholder="">
                 </td>
             </tr>
-            <!-- <tr>
-                <td align="center"> 7 </td>
-                <td>QUR'AN HADIST</td>
-                <td colspan="3">
-                    <span class="wpcf7-form-control-wrap PAI_MI_QURAN_HADIST_semester1_kelasV">
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="">
-                    </span>
-                </td>
-                <td colspan="3">
-                    <span class="wpcf7-form-control-wrap PAI_MI_QURAN_HADIST_semester2_kelasV">
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="">
-                    </span>
-                </td>
-                <td colspan="3">
-                    <span class="wpcf7-form-control-wrap PAI_MI_QURAN_HADIST_semester1_kelas_VI">
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="">
-                    </span>
-                </td>
-            </tr> -->
+
             <tr>
                 <td align="center"> 6 </td>
                 <td>FIQIH</td>

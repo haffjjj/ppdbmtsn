@@ -11,7 +11,7 @@
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="<?php echo base_url() ?>_assets/admin/bower_components/font-awesome/css/font-awesome.min.css">
 	<!-- Ionicons -->
-	<link rel="stylesheet" href="<?php echo base_url() ?>_assets/admin/bower_components/Ionicons/css/ionicons.min.css">
+	<!-- <link rel="stylesheet" href="<?php echo base_url() ?>_assets/admin/bower_components/Ionicons/css/ionicons.min.css"> -->
 	<!-- Theme style -->
 	<link rel="stylesheet" href="<?php echo base_url() ?>_assets/admin/dist/css/AdminLTE.min.css">
 	<!-- AdminLTE Skins. We have chosen the skin-blue for this starter
@@ -19,10 +19,11 @@
         apply the skin class to the body tag so the changes take effect. -->
 	<link rel="stylesheet" href="<?php echo base_url() ?>_assets/admin/dist/css/skins/skin-blue.min.css">
 	<!-- DataTables -->
-	<link rel="stylesheet" href="<?php echo base_url() ?>_assets/admin/jquery-ui.css">
-	<link rel="stylesheet" href="<?php echo base_url() ?>_assets/admin/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
-	<link rel="stylesheet" href="<?php echo base_url() ?>_assets/admin/bower_datetime/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"
-	/>
+	<!-- <link rel="stylesheet" href="<?php echo base_url() ?>_assets/admin/jquery-ui.css"> -->
+	<!-- <link rel="stylesheet" href="<?php echo base_url() ?>_assets/admin/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css"> -->
+	<!-- <link rel="stylesheet" href="<?php echo base_url() ?>_assets/admin/bower_datetime/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" -->
+
+    <link rel="stylesheet" href="<?php echo base_url()?>/_assets/css/bootstrap-datepicker.min.css">
 
 	<link rel="stylesheet" href="<?php echo base_url() ?>_assets/admin/style.css">
 

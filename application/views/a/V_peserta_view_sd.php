@@ -212,13 +212,13 @@
             placeholder="No. Kartu Keluarga">
     </div>
     <div class="form-group">
-        <label for="">No. Kartu KSP (Keluarga Pra Sejahtera)</label>
-        <input value="<?php echo $data['keluarga_ksp'] ?>" required type="number" name="keluarga_ksp" class="form-control" id=""
+        <label for="">No. Kartu KSP (Keluarga Pra Sejahtera) (tidak wajib)</label>
+        <input value="<?php echo $data['keluarga_ksp'] ?>"  type="number" name="keluarga_ksp" class="form-control" id=""
             placeholder="No. Kartu KSP (Keluarga Pra Sejahtera)">
     </div>
     <div class="form-group">
-        <label for="">No. Induk PKH (Program Keluarga Harapan)</label>
-        <input value="<?php echo $data['keluarga_pkh'] ?>" required type="number" name="keluarga_pkh" class="form-control" id=""
+        <label for="">No. Induk PKH (Program Keluarga Harapan) (tidak wajib)</label>
+        <input value="<?php echo $data['keluarga_pkh'] ?>"  type="number" name="keluarga_pkh" class="form-control" id=""
             placeholder="No. Induk PKH (Program Keluarga Harapan)">
     </div>
 
@@ -338,7 +338,7 @@
                 </td>
             </tr>
             <tr>
-                <td align="center">3</td>
+                <td align="center">4</td>
                 <td>PAI</td>
                 <td colspan="3">
                     <span class="wpcf7-form-control-wrap MTK_semester1_kelasV">
@@ -357,6 +357,29 @@
                         <input value="<?php echo $data['raport_pai_3'] ?>" required type="number" name="raport_pai_3" class="form-control" id=""
                             placeholder="">
                     </span>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> 5 </td>
+                <td colspan="6">IJAZAH TPQ/SURAT KETERANGAN</td>
+                <td colspan="3">
+                    <select name="ijazah_tpqsk" id="ijazah_tpqsk" class="form-control" aria-required="true" aria-invalid="false">
+                        <option value="--- KETERANGAN ---">--- KETERANGAN ---</option>
+                        <option value="ada">ADA</option>
+                        <option value="tidak">TIDAK</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> 6 </td>
+                <td colspan="6">IJAZAH MDA/SURAT KETERANGAN</td>
+                <td colspan="3">
+                    <select name="ijazah_mdask" id="ijazah_mdask" class="form-control" aria-required="true" aria-invalid="false">
+                        <option value="--- KETERANGAN ---">--- KETERANGAN ---</option>
+                        <option value="ada">ADA</option>
+                        <option value="tidak">TIDAK</option>
+                    </select>
+
                 </td>
             </tr>
            
@@ -552,7 +575,15 @@
         document.getElementById('<?php echo $data["siswa_kelamin"] ?>').checked = true;
         document.getElementById('ayah_penghasilan').value = '<?php echo $data["ayah_penghasilan"] ?>';
         document.getElementById('ibu_penghasilan').value = '<?php echo $data["ibu_penghasilan"] ?>';
-        document.getElementById('prestasi_hafaljus').value = '<?php echo $data["prestasi_hafaljus"] ?>';status
+        document.getElementById('ijazah_tpqsk').value = '<?php echo $data["ijazah_tpqsk"] ?>';
+        document.getElementById('ijazah_mdask').value = '<?php echo $data["ijazah_mdask"] ?>';
+        document.getElementById('prestasi_hafaljus').value = '<?php echo $data["prestasi_hafaljus"] ?>';
         document.getElementById('status').value = '<?php echo $data["status"] ?>';
     })
+</script>
+<script src="<?php echo base_url()?>/_assets/js/bootstrap-datepicker.min.js"></script>
+<script>
+    $('.datepicker').datepicker({
+        format: 'yyyy-mm-dd'
+    });
 </script>

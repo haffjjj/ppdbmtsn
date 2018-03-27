@@ -175,12 +175,12 @@
                     <input required type="number" name="keluarga_nik" class="form-control" id="" placeholder="No. Kartu Keluarga">
                 </div>
                 <div class="form-group">
-                    <label for="">No. Kartu KSP (Keluarga Pra Sejahtera)</label>
-                    <input required type="number" name="keluarga_ksp" class="form-control" id="" placeholder="No. Kartu KSP (Keluarga Pra Sejahtera)">
+                    <label for="">No. Kartu KSP (Keluarga Pra Sejahtera) (tidak wajib)</label>
+                    <input  type="number" name="keluarga_ksp" class="form-control" id="" placeholder="No. Kartu KSP (Keluarga Pra Sejahtera)">
                 </div>
                 <div class="form-group">
-                    <label for="">No. Induk PKH (Program Keluarga Harapan)</label>
-                    <input required type="number" name="keluarga_pkh" class="form-control" id="" placeholder="No. Induk PKH (Program Keluarga Harapan)">
+                    <label for="">No. Induk PKH (Program Keluarga Harapan) (tidak wajib)</label>
+                    <input  type="number" name="keluarga_pkh" class="form-control" id="" placeholder="No. Induk PKH (Program Keluarga Harapan)">
                 </div>
 
 
@@ -303,6 +303,29 @@
                                 </span>
                             </td>
                         </tr>
+                        <tr>
+                <td align="center"> 5 </td>
+                <td colspan="6">IJAZAH TPQ/SURAT KETERANGAN</td>
+                <td colspan="3">
+                    <select name="ijazah_tpqsk" class="form-control" aria-required="true" aria-invalid="false">
+                        <option value="--- KETERANGAN ---">--- KETERANGAN ---</option>
+                        <option value="ada">ADA</option>
+                        <option value="tidak">TIDAK</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> 6 </td>
+                <td colspan="6">IJAZAH MDA/SURAT KETERANGAN</td>
+                <td colspan="3">
+                    <select name="ijazah_mdask" class="form-control" aria-required="true" aria-invalid="false">
+                        <option value="--- KETERANGAN ---">--- KETERANGAN ---</option>
+                        <option value="ada">ADA</option>
+                        <option value="tidak">TIDAK</option>
+                    </select>
+
+                </td>
+            </tr>
                     </tbody>
                 </table>
 
@@ -456,3 +479,9 @@
                 </table>
                 <button onclick="return confirm('Apakah data sudah sudah benar?');" type="submit" name="submit" value="submit" class="btn btn-primary">Daftar</button>
             </form>
+            <script src="<?php echo base_url()?>/_assets/js/bootstrap-datepicker.min.js"></script>
+<script>
+    $('.datepicker').datepicker({
+        format: 'yyyy-mm-dd'
+    });
+</script>

@@ -47,7 +47,7 @@
 		<!-- small box -->
 		<div class="small-box bg-yellow">
 			<div class="inner">
-				<h3>hoho</h3>
+				<h3>User Setting</h3>
 
 				<p>User</p>
 			</div>

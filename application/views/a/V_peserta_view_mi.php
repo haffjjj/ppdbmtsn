@@ -212,13 +212,13 @@
             placeholder="No. Kartu Keluarga">
     </div>
     <div class="form-group">
-        <label for="">No. Kartu KSP (Keluarga Pra Sejahtera)</label>
-        <input value="<?php echo $data['keluarga_ksp'] ?>" required type="number" name="keluarga_ksp" class="form-control" id=""
+        <label for="">No. Kartu KSP (Keluarga Pra Sejahtera) (tidak wajib)</label>
+        <input value="<?php echo $data['keluarga_ksp'] ?>"  type="number" name="keluarga_ksp" class="form-control" id=""
             placeholder="No. Kartu KSP (Keluarga Pra Sejahtera)">
     </div>
     <div class="form-group">
-        <label for="">No. Induk PKH (Program Keluarga Harapan)</label>
-        <input value="<?php echo $data['keluarga_pkh'] ?>" required type="number" name="keluarga_pkh" class="form-control" id=""
+        <label for="">No. Induk PKH (Program Keluarga Harapan) (tidak wajib)</label>
+        <input value="<?php echo $data['keluarga_pkh'] ?>"  type="number" name="keluarga_pkh" class="form-control" id=""
             placeholder="No. Induk PKH (Program Keluarga Harapan)">
     </div>
 
@@ -640,8 +640,14 @@
         document.getElementById('ayah_penghasilan').value = '<?php echo $data["ayah_penghasilan"] ?>';
         document.getElementById('ibu_penghasilan').value = '<?php echo $data["ibu_penghasilan"] ?>';
         document.getElementById('ijazah_tpqsk').value = '<?php echo $data["ijazah_tpqsk"] ?>';
-        document.getElementById('ijazah_mdask').value = '<?php echo $data["ijazah_mdask"] ?>';prestasi_hafaljus
-        document.getElementById('prestasi_hafaljus').value = '<?php echo $data["prestasi_hafaljus"] ?>';status
+        document.getElementById('ijazah_mdask').value = '<?php echo $data["ijazah_mdask"] ?>';
+        document.getElementById('prestasi_hafaljus').value = '<?php echo $data["prestasi_hafaljus"] ?>';
         document.getElementById('status').value = '<?php echo $data["status"] ?>';
     })
+</script>
+<script src="<?php echo base_url()?>/_assets/js/bootstrap-datepicker.min.js"></script>
+<script>
+    $('.datepicker').datepicker({
+        format: 'yyyy-mm-dd'
+    });
 </script>

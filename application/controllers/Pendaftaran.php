@@ -107,6 +107,8 @@ class Pendaftaran extends CI_Controller {
                 'raport_pai_1' => $this->input->post('raport_pai_1'),
                 'raport_pai_2' => $this->input->post('raport_pai_2'),
                 'raport_pai_3' => $this->input->post('raport_pai_3'),
+                'ijazah_tpqsk' => $this->input->post('ijazah_tpqsk'),
+                'ijazah_mdask' => $this->input->post('ijazah_mdask'),
                 'prestasi_nonakademik_jenis_1' => $this->input->post('prestasi_nonakademik_jenis_1'),
                 'prestasi_nonakademik_jenis_2' => $this->input->post('prestasi_nonakademik_jenis_2'),
                 'prestasi_nonakademik_peringkat_kec_1' => $this->input->post('prestasi_nonakademik_peringkat_kec_1'),
@@ -176,9 +178,7 @@ class Pendaftaran extends CI_Controller {
                     'raport_fiqih_3' => $this->input->post('raport_fiqih_3'),
                     'raport_ski_1' => $this->input->post('raport_ski_1'),
                     'raport_ski_2' => $this->input->post('raport_ski_2'),
-                    'raport_ski_3' => $this->input->post('raport_ski_3'),
-                    'ijazah_tpqsk' => $this->input->post('ijazah_tpqsk'),
-                    'ijazah_mdask' => $this->input->post('ijazah_mdask')
+                    'raport_ski_3' => $this->input->post('raport_ski_3')
                 ];
                 $data = array_merge($data,$data2);
 
