@@ -70,7 +70,7 @@ $bulan = array(
                                 <td>:</td>
                                 <td><?php echo str_pad($data['urutan'], 4, '0', STR_PAD_LEFT); ?>/PPDB/<?php 
                                 echo strtoupper($data['dari_sekolah']);
-                                if($data['siswa_kelamin'] == 'laki laki'){
+                                if($data['siswa_kelamin'] == 'laki-laki'){
                                     echo 'PA';
                                 }
                                 else{

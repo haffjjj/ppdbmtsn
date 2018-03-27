@@ -13,14 +13,14 @@
 		<!-- small box -->
 		<div class="small-box bg-aqua">
 			<div class="inner">
-				<h3>HOHO</h3>
+				<h3><?php echo $belum ?></h3>
 
 				<p>Peserta Belum diperiksa</p>
 			</div>
 			<div class="icon">
 				<i class="ion ion-bag"></i>
 			</div>
-			<a href="<?php echo base_url() ?>admin/reservation" class="small-box-footer">Selengkapnya
+			<a href="<?php echo base_url() ?>admin/peserta" class="small-box-footer">Selengkapnya
 				<i class="fa fa-arrow-circle-right"></i>
 			</a>
 		</div>
@@ -30,15 +30,14 @@
 		<!-- small box -->
 		<div class="small-box bg-green">
 			<div class="inner">
-				<h3>hoho
-				</h3>
+				<h3><?php echo $sudah ?></h3>
 
 				<p>Peserta Sudah diperiksa</p>
 			</div>
 			<div class="icon">
 				<i class="ion ion-stats-bars"></i>
 			</div>
-			<a href="<?php echo base_url() ?>admin/customer" class="small-box-footer">Selengkapnya
+			<a href="<?php echo base_url() ?>admin/peserta" class="small-box-footer">Selengkapnya
 				<i class="fa fa-arrow-circle-right"></i>
 			</a>
 		</div>
@@ -55,7 +54,7 @@
 			<div class="icon">
 				<i class="ion ion-person-add"></i>
 			</div>
-			<a href="<?php echo base_url() ?>admin/rute" class="small-box-footer">Selengkapnya
+			<a href="<?php echo base_url() ?>admin/user" class="small-box-footer">Selengkapnya
 				<i class="fa fa-arrow-circle-right"></i>
 			</a>
 		</div>

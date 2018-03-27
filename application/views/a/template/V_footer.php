@@ -122,7 +122,7 @@
     })
   })
 </script>
-<!-- <?php echo $script ?> -->
+<?php echo $script ?>
 
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.

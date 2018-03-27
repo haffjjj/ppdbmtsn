@@ -19,7 +19,7 @@
                 <div class="form-group">
                     <label for="">Jenis Kelamin</label>
                     <br>
-                    <input required type="radio" value="laki laki" name="siswa_kelamin" class="" id="" placeholder=""> Laki Laki
+                    <input required type="radio" value="laki-laki" name="siswa_kelamin" class="" id="" placeholder=""> Laki-Laki
                     <input required type="radio" value="perempuan" name="siswa_kelamin" id="" placeholder=""> Perempuan
                 </div>
                 <div class="form-group">

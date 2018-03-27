@@ -91,6 +91,7 @@ class Pendaftaran extends CI_Controller {
                 'lbp_sklh_desa' => $this->input->post('lbp_sklh_desa'),
                 'lbp_sklh_kecamatan' => $this->input->post('lbp_sklh_kecamatan'),
                 'lbp_sklh_kabupaten' => $this->input->post('lbp_sklh_kabupaten'),
+                'lbp_sklh_kodepos' => $this->input->post('lbp_sklh_kodepos'),
                 'lbp_sklh_tahunlulus' => $this->input->post('lbp_sklh_tahunlulus'),
                 'lbp_sklh_nisn' => $this->input->post('lbp_sklh_nisn'),
                 'lbp_sklh_npusklh' => $this->input->post('lbp_sklh_npusklh'),
@@ -181,7 +182,7 @@ class Pendaftaran extends CI_Controller {
                 ];
                 $data = array_merge($data,$data2);
 
-                if ($last_id = $this->M_pendaftaran->insert($data,$data_kartu)) {
+                if ($last_id = $this->M_pendaftaran->insert($data,$urutan)) {
                     $this->load->view('u/template/V_header');
 		            $this->load->view('u/v_sukses',['id' => $last_id]);
 		            $this->load->view('u/template/V_footer');

@@ -154,21 +154,15 @@ desired effect
 						</a>
 					</li>
 					<li class="">
-						<a href="<?php echo base_url() ?>admin/peserta/belum">
+						<a href="<?php echo base_url() ?>admin/peserta/">
 							<i class="fa fa-link"></i>
-							<span>Peserta belum diperiksa</span>
-						</a>
-					</li>
-					<li class="">
-						<a href="<?php echo base_url() ?>admin/peserta/sudah">
-							<i class="fa fa-link"></i>
-							<span>Peserta sudah diperiksa</span>
+							<span>Peserta</span>
 						</a>
 					</li>
 					<li class="">
 						<a href="<?php echo base_url() ?>admin/user">
 							<i class="fa fa-link"></i>
-							<span>Setting</span>
+							<span>User</span>
 						</a>
 					</li>
 					</li>
