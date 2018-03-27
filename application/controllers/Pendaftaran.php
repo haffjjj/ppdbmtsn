@@ -132,6 +132,8 @@ class Pendaftaran extends CI_Controller {
 
             $urutan = null;
             if($urutan_max = $this->M_pendaftaran->get_urutan($this->input->post('siswa_kelamin'),$this->input->post('dari_sekolah'))){
+                // var_dump($urutan_max);
+                // die;
                 if(count($urutan_max) > 0){
                     $urutan = $urutan_max[0]['urutan'] + 1;
                 }
@@ -140,15 +142,15 @@ class Pendaftaran extends CI_Controller {
                 }
             }
 
-            $data_kartu = [
-                $this->input->post('siswa_kelamin'),
-                $this->input->post('dari_sekolah'),
-                $urutan
-            ];
+            // $data_kartu = [
+            //     // $this->input->post('siswa_kelamin'),
+            //     // $this->input->post('dari_sekolah'),
+            //     $urutan
+            // ];
 
             if ($this->input->post('dari_sekolah') == 'sd') {
 
-                if ($last_id = $this->M_pendaftaran->insert($data,$data_kartu)) {
+                if ($last_id = $this->M_pendaftaran->insert($data,$urutan)) {
                     $this->load->view('u/template/V_header');
 		            $this->load->view('u/v_sukses',['id' => $last_id]);		            
 		            $this->load->view('u/template/V_footer');

@@ -22,7 +22,7 @@ $bulan = array(
     }
 
     img {
-        width: 340px;
+        width: 710px;
     }
 
     .title {
@@ -44,14 +44,10 @@ $bulan = array(
 </style>
 
 <body>
-    <p style="text-align:left"><?php date_default_timezone_set('Asia/Jakarta');echo date('d-m-Y H:i:s');?></p>
+    <p style="text-align:right "><?php date_default_timezone_set('Asia/Jakarta');echo date('d-m-Y H:i:s');?></p>
     <img src="<?php echo base_url()?>_assets/images/logo_kartu.png" alt="">
     <div class="title">
         <h2 style="text-align:center; color:white;">Kartu Peserta</h2>
-    </div>
-    <div style=" text-align:center;line-height: 7px;font-size: 15px;" class="title-sub">
-        <h5>PPDB MTS Negeri 1 Tegal</h5>
-        <h5>Online</h5>
     </div>
     <hr>
     <br>
@@ -74,7 +70,7 @@ $bulan = array(
                                 <td>:</td>
                                 <td><?php echo str_pad($data['urutan'], 4, '0', STR_PAD_LEFT); ?>/PPDB/<?php 
                                 echo strtoupper($data['dari_sekolah']);
-                                if($data['kelamin'] == 'laki laki'){
+                                if($data['siswa_kelamin'] == 'laki laki'){
                                     echo 'PA';
                                 }
                                 else{
@@ -112,7 +108,7 @@ $bulan = array(
             <th>Lokasi UJIAN</th>
         </tr>
         <tr>
-            <td align="center">26 April 2018</td>
+            <td align="center">29 April 2018</td>
             <td align="center">MTS Negeri 1 Tegal</td>
         </tr>
     </table>
