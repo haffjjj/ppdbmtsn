@@ -68,4 +68,14 @@ Class M_admin extends CI_Model{
         $this->db->update('tb_admin', $data);
         return $this->db->affected_rows();
     }
+
+    public function get_setting(){
+        $this->db->where('id',1);
+        return $this->db->get('tb_setting')->result_array();
+    }
+    public function setting_update($data){
+        $this->db->where('id', 1);
+        $this->db->update('tb_setting', $data);
+        return $this->db->affected_rows();
+    }
 }

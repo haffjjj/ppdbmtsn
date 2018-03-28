@@ -40,10 +40,10 @@ class Peserta extends CI_Controller {
 
     public function tambah($sekolah){
         if($sekolah == 'sd'){
-            $this->load->view('a/v_tambah_sd');
+            $this->load->view('a/V_tambah_sd');
         }
         elseif($sekolah == 'mi'){
-            $this->load->view('a/v_tambah_mi');            
+            $this->load->view('a/V_tambah_mi');            
         }
         else{
             echo 'error';
@@ -59,17 +59,12 @@ class Peserta extends CI_Controller {
 
             $this->load->library('upload', $config);
 
+            if($_FILES['siswa_foto']['name'] != ''){
+
             if ( !$this->upload->do_upload('siswa_foto'))
             {
                     $error = array('error' => $this->upload->display_errors());
-
-                    $this->load->view('u/template/V_header');
-		            $this->load->view('u/v_gagal',['gagal'=>'Foto tidak sesuai.']);
-		            $this->load->view('u/template/V_footer');
-                    // echo 'gagal';
-                    $this->CI =& get_instance(); 
-                    $this->CI->output->_display();
-                    die();
+                    echo 'error foto tidak sesuai';
             }
             else
             {
@@ -78,6 +73,8 @@ class Peserta extends CI_Controller {
                     // die;
                     // $this->load->view('upload_success', $data);
             }
+
+           }
 
             $data = [
                 'dari_sekolah' => $this->input->post('dari_sekolah'),

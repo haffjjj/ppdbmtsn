@@ -10,7 +10,7 @@
         <br>
         <img style="max-width: 160px;margin-top: 15px;margin-bottom: 15px;" src="<?php echo base_url() ?>uploads/<?php echo $data['siswa_foto'] ?>"
             alt="">
-        <input required type="file" name="siswa_foto" class="form-control" id="" placeholder="">
+        <input type="file" name="siswa_foto" class="form-control" id="" placeholder="">
         <br>
         <button onclick="return confirm('Foto di Update?');" type="submit" name="submit" value="submit" class="btn btn-primary">Update Foto</button>
     </div>
@@ -76,8 +76,8 @@
             id="" placeholder="Kode Pos">
     </div>
     <div class="form-group">
-        <label for="">Email</label>
-        <input value="<?php echo $data['siswa_email'] ?>" required type="text" name="siswa_email" class="form-control" id="" placeholder="Email">
+        <label for="">Email (tidak wajib)</label>
+        <input value="<?php echo $data['siswa_email'] ?>" type="text" name="siswa_email" class="form-control" id="" placeholder="Email">
     </div>
     <div class="form-group">
         <label for="">No. Induk Kependudukan</label>
@@ -389,7 +389,7 @@
 
     <!-- ##### Prestasi Akademi/Non Akademik ##### -->
     <div class="title-pendaftaran">
-        <h3>Prestasi Akademik/ Non Akademik</h3>
+        <h3>Prestasi Akademik/ Non Akademik (tidak wajib)</h3>
         <div class="line"></div>
     </div>
 
@@ -414,62 +414,62 @@
                 <td>NONAKADEMIK</td>
                 <td colspan="6">
                     <span class="wpcf7-form-control-wrap nonAKA_1">
-                        <input value="<?php echo $data['prestasi_nonakademik_jenis_1'] ?>" required type="text" name="prestasi_nonakademik_jenis_1"
+                        <input value="<?php echo $data['prestasi_nonakademik_jenis_1'] ?>" type="text" name="prestasi_nonakademik_jenis_1"
                             class="form-control" id="" placeholder="">
                     </span>
                     <br>
                     <span class="wpcf7-form-control-wrap nonAKA_2">
-                        <input value="<?php echo $data['prestasi_nonakademik_jenis_2'] ?>" required type="text" name="prestasi_nonakademik_jenis_2"
+                        <input value="<?php echo $data['prestasi_nonakademik_jenis_2'] ?>" type="text" name="prestasi_nonakademik_jenis_2"
                             class="form-control" id="" placeholder="">
                     </span>
                 </td>
                 <td colspan="1">
                     <span class="wpcf7-form-control-wrap nonAKA1_kec">
-                        <input value="<?php echo $data['prestasi_nonakademik_peringkat_kec_1'] ?>" required type="number" name="prestasi_nonakademik_peringkat_kec_1"
+                        <input value="<?php echo $data['prestasi_nonakademik_peringkat_kec_1'] ?>" type="number" name="prestasi_nonakademik_peringkat_kec_1"
                             class="form-control" id="" placeholder="">
                     </span>
                     <br>
                     <span class="wpcf7-form-control-wrap nonAKA2_kec">
-                        <input value="<?php echo $data['prestasi_nonakademik_peringkat_kec_2'] ?>" required type="number" name="prestasi_nonakademik_peringkat_kec_2"
+                        <input value="<?php echo $data['prestasi_nonakademik_peringkat_kec_2'] ?>" type="number" name="prestasi_nonakademik_peringkat_kec_2"
                             class="form-control" id="" placeholder="">
 
                     </span>
                 </td>
                 <td colspan="1">
                     <span class="wpcf7-form-control-wrap nonAKA1_kab">
-                        <input value="<?php echo $data['prestasi_nonakademik_peringkat_kab_1'] ?>" required type="number" name="prestasi_nonakademik_peringkat_kab_1"
+                        <input value="<?php echo $data['prestasi_nonakademik_peringkat_kab_1'] ?>" type="number" name="prestasi_nonakademik_peringkat_kab_1"
                             class="form-control" id="" placeholder="">
 
                     </span>
                     <br>
                     <span class="wpcf7-form-control-wrap nonAKA2_kab">
-                        <input value="<?php echo $data['prestasi_nonakademik_peringkat_kab_2'] ?>" required type="number" name="prestasi_nonakademik_peringkat_kab_2"
+                        <input value="<?php echo $data['prestasi_nonakademik_peringkat_kab_2'] ?>" type="number" name="prestasi_nonakademik_peringkat_kab_2"
                             class="form-control" id="" placeholder="">
 
                     </span>
                 </td>
                 <td colspan="1">
                     <span class="wpcf7-form-control-wrap nonAKA1_prov">
-                        <input value="<?php echo $data['prestasi_nonakademik_peringkat_prov_1'] ?>" required type="number" name="prestasi_nonakademik_peringkat_prov_1"
+                        <input value="<?php echo $data['prestasi_nonakademik_peringkat_prov_1'] ?>" type="number" name="prestasi_nonakademik_peringkat_prov_1"
                             class="form-control" id="" placeholder="">
 
                     </span>
                     <br>
                     <span class="wpcf7-form-control-wrap nonAKA2_prov">
-                        <input value="<?php echo $data['prestasi_nonakademik_peringkat_prov_2'] ?>" required type="number" name="prestasi_nonakademik_peringkat_prov_2"
+                        <input value="<?php echo $data['prestasi_nonakademik_peringkat_prov_2'] ?>" type="number" name="prestasi_nonakademik_peringkat_prov_2"
                             class="form-control" id="" placeholder="">
 
                     </span>
                 </td>
                 <td colspan="1">
                     <span class="wpcf7-form-control-wrap nonAKA1_nasional">
-                        <input value="<?php echo $data['prestasi_nonakademik_peringkat_nasi_1'] ?>" required type="number" name="prestasi_nonakademik_peringkat_nasi_1"
+                        <input value="<?php echo $data['prestasi_nonakademik_peringkat_nasi_1'] ?>" type="number" name="prestasi_nonakademik_peringkat_nasi_1"
                             class="form-control" id="" placeholder="">
 
                     </span>
                     <br>
                     <span class="wpcf7-form-control-wrap nonAKA2_nasional">
-                        <input value="<?php echo $data['prestasi_nonakademik_peringkat_nasi_2'] ?>" required type="number" name="prestasi_nonakademik_peringkat_nasi_2"
+                        <input value="<?php echo $data['prestasi_nonakademik_peringkat_nasi_2'] ?>" type="number" name="prestasi_nonakademik_peringkat_nasi_2"
                             class="form-control" id="" placeholder="">
 
                     </span>
@@ -480,62 +480,62 @@
                 <td>AKADEMIK</td>
                 <td colspan="6">
                     <span class="wpcf7-form-control-wrap nonAKA_1">
-                        <input value="<?php echo $data['prestasi_akademik_jenis_1'] ?>" required type="text" name="prestasi_akademik_jenis_1" class="form-control"
+                        <input value="<?php echo $data['prestasi_akademik_jenis_1'] ?>" type="text" name="prestasi_akademik_jenis_1" class="form-control"
                             id="" placeholder="">
                     </span>
                     <br>
                     <span class="wpcf7-form-control-wrap nonAKA_2">
-                        <input value="<?php echo $data['prestasi_akademik_jenis_2'] ?>" required type="text" name="prestasi_akademik_jenis_2" class="form-control"
+                        <input value="<?php echo $data['prestasi_akademik_jenis_2'] ?>" type="text" name="prestasi_akademik_jenis_2" class="form-control"
                             id="" placeholder="">
                     </span>
                 </td>
                 <td colspan="1">
                     <span class="wpcf7-form-control-wrap nonAKA1_kec">
-                        <input value="<?php echo $data['prestasi_akademik_peringkat_kec_1'] ?>" required type="number" name="prestasi_akademik_peringkat_kec_1"
+                        <input value="<?php echo $data['prestasi_akademik_peringkat_kec_1'] ?>" type="number" name="prestasi_akademik_peringkat_kec_1"
                             class="form-control" id="" placeholder="">
                     </span>
                     <br>
                     <span class="wpcf7-form-control-wrap nonAKA2_kec">
-                        <input value="<?php echo $data['prestasi_akademik_peringkat_kec_2'] ?>" required type="number" name="prestasi_akademik_peringkat_kec_2"
+                        <input value="<?php echo $data['prestasi_akademik_peringkat_kec_2'] ?>" type="number" name="prestasi_akademik_peringkat_kec_2"
                             class="form-control" id="" placeholder="">
 
                     </span>
                 </td>
                 <td colspan="1">
                     <span class="wpcf7-form-control-wrap nonAKA1_kab">
-                        <input value="<?php echo $data['prestasi_akademik_peringkat_kab_1'] ?>" required type="number" name="prestasi_akademik_peringkat_kab_1"
+                        <input value="<?php echo $data['prestasi_akademik_peringkat_kab_1'] ?>" type="number" name="prestasi_akademik_peringkat_kab_1"
                             class="form-control" id="" placeholder="">
 
                     </span>
                     <br>
                     <span class="wpcf7-form-control-wrap nonAKA2_kab">
-                        <input value="<?php echo $data['prestasi_akademik_peringkat_kab_2'] ?>" required type="number" name="prestasi_akademik_peringkat_kab_2"
+                        <input value="<?php echo $data['prestasi_akademik_peringkat_kab_2'] ?>" type="number" name="prestasi_akademik_peringkat_kab_2"
                             class="form-control" id="" placeholder="">
 
                     </span>
                 </td>
                 <td colspan="1">
                     <span class="wpcf7-form-control-wrap nonAKA1_prov">
-                        <input value="<?php echo $data['prestasi_akademik_peringkat_prov_1'] ?>" required type="number" name="prestasi_akademik_peringkat_prov_1"
+                        <input value="<?php echo $data['prestasi_akademik_peringkat_prov_1'] ?>" type="number" name="prestasi_akademik_peringkat_prov_1"
                             class="form-control" id="" placeholder="">
 
                     </span>
                     <br>
                     <span class="wpcf7-form-control-wrap nonAKA2_prov">
-                        <input value="<?php echo $data['prestasi_akademik_peringkat_prov_2'] ?>" required type="number" name="prestasi_akademik_peringkat_prov_2"
+                        <input value="<?php echo $data['prestasi_akademik_peringkat_prov_2'] ?>" type="number" name="prestasi_akademik_peringkat_prov_2"
                             class="form-control" id="" placeholder="">
 
                     </span>
                 </td>
                 <td colspan="1">
                     <span class="wpcf7-form-control-wrap nonAKA1_nasional">
-                        <input value="<?php echo $data['prestasi_akademik_peringkat_nasi_1'] ?>" required type="number" name="prestasi_akademik_peringkat_nasi_1"
+                        <input value="<?php echo $data['prestasi_akademik_peringkat_nasi_1'] ?>" type="number" name="prestasi_akademik_peringkat_nasi_1"
                             class="form-control" id="" placeholder="">
 
                     </span>
                     <br>
                     <span class="wpcf7-form-control-wrap nonAKA2_nasional">
-                        <input value="<?php echo $data['prestasi_akademik_peringkat_nasi_2'] ?>" required type="number" name="prestasi_akademik_peringkat_nasi_2"
+                        <input value="<?php echo $data['prestasi_akademik_peringkat_nasi_2'] ?>" type="number" name="prestasi_akademik_peringkat_nasi_2"
                             class="form-control" id="" placeholder="">
 
                     </span>

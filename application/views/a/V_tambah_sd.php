@@ -46,8 +46,8 @@
                     <input required type="number" name="siswa_alamat_kodepos" class="form-control" id="" placeholder="Kode Pos">
                 </div>
                 <div class="form-group">
-                    <label for="">Email</label>
-                    <input required type="text" name="siswa_email" class="form-control" id="" placeholder="Email">
+                    <label for="">Email (tidak wajib)</label>
+                    <input type="text" name="siswa_email" class="form-control" id="" placeholder="Email">
                 </div>
                 <div class="form-group">
                     <label for="">No. Induk Kependudukan</label>
@@ -56,7 +56,7 @@
 
                 <div class="form-group">
                     <label for="">Foto Resmi (< 500 KB gif/jpg/png) *format NAMA_SD</label>
-                    <input required type="file" name="siswa_foto" class="form-control" id="" placeholder="">
+                    <input type="file" name="siswa_foto" class="form-control" id="" placeholder="">
                 </div>
                 
 
@@ -332,7 +332,7 @@
 
                 <!-- ##### Prestasi Akademi/Non Akademik ##### -->
                 <div class="title-pendaftaran">
-                    <h3>Prestasi Akademik/ Non Akademik</h3>
+                    <h3>Prestasi Akademik/ Non Akademik (tidak wajib)</h3>
                     <div class="line"></div>
                 </div>
 
@@ -357,53 +357,53 @@
                             <td>NONAKADEMIK</td>
                             <td colspan="6">
                                 <span class="wpcf7-form-control-wrap nonAKA_1">
-                                    <input required type="text" name="prestasi_nonakademik_jenis_1" class="form-control" id="" placeholder="">
+                                    <input type="text" name="prestasi_nonakademik_jenis_1" class="form-control" id="" placeholder="">
                                 </span>
                                 <br>
                                 <span class="wpcf7-form-control-wrap nonAKA_2">
-                                    <input required type="text" name="prestasi_nonakademik_jenis_2" class="form-control" id="" placeholder="">
+                                    <input type="text" name="prestasi_nonakademik_jenis_2" class="form-control" id="" placeholder="">
                                 </span>
                             </td>
                             <td colspan="1">
                                 <span class="wpcf7-form-control-wrap nonAKA1_kec">
-                                    <input required type="number" name="prestasi_nonakademik_peringkat_kec_1" class="form-control" id="" placeholder="">
+                                    <input type="number" name="prestasi_nonakademik_peringkat_kec_1" class="form-control" id="" placeholder="">
                                 </span>
                                 <br>
                                 <span class="wpcf7-form-control-wrap nonAKA2_kec">
-                                    <input required type="number" name="prestasi_nonakademik_peringkat_kec_2" class="form-control" id="" placeholder="">
+                                    <input type="number" name="prestasi_nonakademik_peringkat_kec_2" class="form-control" id="" placeholder="">
 
                                 </span>
                             </td>
                             <td colspan="1">
                                 <span class="wpcf7-form-control-wrap nonAKA1_kab">
-                                    <input required type="number" name="prestasi_nonakademik_peringkat_kab_1" class="form-control" id="" placeholder="">
+                                    <input type="number" name="prestasi_nonakademik_peringkat_kab_1" class="form-control" id="" placeholder="">
 
                                 </span>
                                 <br>
                                 <span class="wpcf7-form-control-wrap nonAKA2_kab">
-                                    <input required type="number" name="prestasi_nonakademik_peringkat_kab_2" class="form-control" id="" placeholder="">
+                                    <input type="number" name="prestasi_nonakademik_peringkat_kab_2" class="form-control" id="" placeholder="">
 
                                 </span>
                             </td>
                             <td colspan="1">
                                 <span class="wpcf7-form-control-wrap nonAKA1_prov">
-                                    <input required type="number" name="prestasi_nonakademik_peringkat_prov_1" class="form-control" id="" placeholder="">
+                                    <input type="number" name="prestasi_nonakademik_peringkat_prov_1" class="form-control" id="" placeholder="">
 
                                 </span>
                                 <br>
                                 <span class="wpcf7-form-control-wrap nonAKA2_prov">
-                                    <input required type="number" name="prestasi_nonakademik_peringkat_prov_2" class="form-control" id="" placeholder="">
+                                    <input type="number" name="prestasi_nonakademik_peringkat_prov_2" class="form-control" id="" placeholder="">
 
                                 </span>
                             </td>
                             <td colspan="1">
                                 <span class="wpcf7-form-control-wrap nonAKA1_nasional">
-                                    <input required type="number" name="prestasi_nonakademik_peringkat_nasi_1" class="form-control" id="" placeholder="">
+                                    <input type="number" name="prestasi_nonakademik_peringkat_nasi_1" class="form-control" id="" placeholder="">
 
                                 </span>
                                 <br>
                                 <span class="wpcf7-form-control-wrap nonAKA2_nasional">
-                                    <input required type="number" name="prestasi_nonakademik_peringkat_nasi_2" class="form-control" id="" placeholder="">
+                                    <input type="number" name="prestasi_nonakademik_peringkat_nasi_2" class="form-control" id="" placeholder="">
 
                                 </span>
                             </td>
@@ -413,53 +413,53 @@
                             <td>AKADEMIK</td>
                             <td colspan="6">
                                 <span class="wpcf7-form-control-wrap nonAKA_1">
-                                    <input required type="text" name="prestasi_akademik_jenis_1" class="form-control" id="" placeholder="">
+                                    <input type="text" name="prestasi_akademik_jenis_1" class="form-control" id="" placeholder="">
                                 </span>
                                 <br>
                                 <span class="wpcf7-form-control-wrap nonAKA_2">
-                                    <input required type="text" name="prestasi_akademik_jenis_2" class="form-control" id="" placeholder="">
+                                    <input type="text" name="prestasi_akademik_jenis_2" class="form-control" id="" placeholder="">
                                 </span>
                             </td>
                             <td colspan="1">
                                 <span class="wpcf7-form-control-wrap nonAKA1_kec">
-                                    <input required type="number" name="prestasi_akademik_peringkat_kec_1" class="form-control" id="" placeholder="">
+                                    <input type="number" name="prestasi_akademik_peringkat_kec_1" class="form-control" id="" placeholder="">
                                 </span>
                                 <br>
                                 <span class="wpcf7-form-control-wrap nonAKA2_kec">
-                                    <input required type="number" name="prestasi_akademik_peringkat_kec_2" class="form-control" id="" placeholder="">
+                                    <input type="number" name="prestasi_akademik_peringkat_kec_2" class="form-control" id="" placeholder="">
 
                                 </span>
                             </td>
                             <td colspan="1">
                                 <span class="wpcf7-form-control-wrap nonAKA1_kab">
-                                    <input required type="number" name="prestasi_akademik_peringkat_kab_1" class="form-control" id="" placeholder="">
+                                    <input type="number" name="prestasi_akademik_peringkat_kab_1" class="form-control" id="" placeholder="">
 
                                 </span>
                                 <br>
                                 <span class="wpcf7-form-control-wrap nonAKA2_kab">
-                                    <input required type="number" name="prestasi_akademik_peringkat_kab_2" class="form-control" id="" placeholder="">
+                                    <input type="number" name="prestasi_akademik_peringkat_kab_2" class="form-control" id="" placeholder="">
 
                                 </span>
                             </td>
                             <td colspan="1">
                                 <span class="wpcf7-form-control-wrap nonAKA1_prov">
-                                    <input required type="number" name="prestasi_akademik_peringkat_prov_1" class="form-control" id="" placeholder="">
+                                    <input type="number" name="prestasi_akademik_peringkat_prov_1" class="form-control" id="" placeholder="">
 
                                 </span>
                                 <br>
                                 <span class="wpcf7-form-control-wrap nonAKA2_prov">
-                                    <input required type="number" name="prestasi_akademik_peringkat_prov_2" class="form-control" id="" placeholder="">
+                                    <input type="number" name="prestasi_akademik_peringkat_prov_2" class="form-control" id="" placeholder="">
 
                                 </span>
                             </td>
                             <td colspan="1">
                                 <span class="wpcf7-form-control-wrap nonAKA1_nasional">
-                                    <input required type="number" name="prestasi_akademik_peringkat_nasi_1" class="form-control" id="" placeholder="">
+                                    <input type="number" name="prestasi_akademik_peringkat_nasi_1" class="form-control" id="" placeholder="">
 
                                 </span>
                                 <br>
                                 <span class="wpcf7-form-control-wrap nonAKA2_nasional">
-                                    <input required type="number" name="prestasi_akademik_peringkat_nasi_2" class="form-control" id="" placeholder="">
+                                    <input type="number" name="prestasi_akademik_peringkat_nasi_2" class="form-control" id="" placeholder="">
 
                                 </span>
                             </td>

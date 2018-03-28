@@ -14,4 +14,9 @@ Class M_pendaftaran extends CI_Model{
         // $this->db->where(');
         return $this->db->get()->result_array();
     }
+
+    public function get_date(){
+        $this->db->where('id',1);
+        return $this->db->get('tb_setting')->result_array();
+    }
 }

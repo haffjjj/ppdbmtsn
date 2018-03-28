@@ -166,6 +166,12 @@ desired effect
 							<span>User</span>
 						</a>
 					</li>
+					<li class="">
+						<a href="<?php echo base_url() ?>admin/setting">
+							<i class="fa fa-link"></i>
+							<span>Setting</span>
+						</a>
+					</li>
 					</li>
 
 				</ul>

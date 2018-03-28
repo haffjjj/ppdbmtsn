@@ -6,18 +6,38 @@ class Pendaftaran extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('M_pendaftaran');
+
+        $date = $this->M_pendaftaran->get_date()[0];
+
+		date_default_timezone_set('Asia/Jakarta');
+		$now= strtotime(date('Y-m-d'));
+		
+		$mulai = strtotime($date['mulai']);
+		$selesai = strtotime($date['selesai']);
+
+		if($now < $mulai){
+			redirect(base_url());
+		}
+		elseif (($now > $mulai) && ($now < $selesai))
+		{
+			$ppdb = 'dalam';
+		}
+		elseif($now > $selesai)
+		{
+			redirect(base_url());
+		}
     }
 	public function index()
 	{
       redirect(base_url());
     }
     public function sd(){
-        $this->load->view('u/template/V_header');
-		$this->load->view('u/v_pendaftaran_sd');
+        $this->load->view('u/template/V_header',['ppdb'=>'dalam']);
+		$this->load->view('u/V_pendaftaran_sd');
 		$this->load->view('u/template/V_footer');		
     }
     public function mi(){
-        $this->load->view('u/template/V_header');
+        $this->load->view('u/template/V_header',['ppdb'=>'dalam']);
 		$this->load->view('u/V_pendaftaran_mi');
 		$this->load->view('u/template/V_footer');		
     }
@@ -30,6 +50,8 @@ class Pendaftaran extends CI_Controller {
             $config['max_size']             = 500;
 
             $this->load->library('upload', $config);
+
+           if($_FILES['siswa_foto']['name'] != ''){
 
             if ( !$this->upload->do_upload('siswa_foto'))
             {
@@ -50,6 +72,8 @@ class Pendaftaran extends CI_Controller {
                     // die;
                     // $this->load->view('upload_success', $data);
             }
+
+           }
 
             $data = [
                 'dari_sekolah' => $this->input->post('dari_sekolah'),
@@ -155,13 +179,13 @@ class Pendaftaran extends CI_Controller {
 
                 if ($last_id = $this->M_pendaftaran->insert($data,$urutan)) {
                     $this->load->view('u/template/V_header');
-		            $this->load->view('u/v_sukses',['id' => $last_id]);		            
+		            $this->load->view('u/V_sukses',['id' => $last_id]);		            
 		            $this->load->view('u/template/V_footer');
                 }
 
                 else{
                     $this->load->view('u/template/V_header');
-		            $this->load->view('u/v_gagal',['gagal'=>'Terjadi kesalahan']);
+		            $this->load->view('u/V_gagal',['gagal'=>'Terjadi kesalahan']);
 		            $this->load->view('u/template/V_footer');
                 }
             }
@@ -184,12 +208,12 @@ class Pendaftaran extends CI_Controller {
 
                 if ($last_id = $this->M_pendaftaran->insert($data,$urutan)) {
                     $this->load->view('u/template/V_header');
-		            $this->load->view('u/v_sukses',['id' => $last_id]);
+		            $this->load->view('u/V_sukses',['id' => $last_id]);
 		            $this->load->view('u/template/V_footer');
                 }
                 else{
                     $this->load->view('u/template/V_header');
-		            $this->load->view('u/v_gagal',['gagal'=>'Terjadi kesalahan']);
+		            $this->load->view('u/V_gagal',['gagal'=>'Terjadi kesalahan']);
 		            $this->load->view('u/template/V_footer');
                 }
             }
